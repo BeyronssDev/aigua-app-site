@@ -1,0 +1,142 @@
+:root {
+  color-scheme: light;
+  --ink: #142936;
+  --muted: #5f737d;
+  --ocean: #0b7bd0;
+  --aqua: #37c7f2;
+  --cream: #fbfaf0;
+  --panel: rgba(255, 255, 255, 0.72);
+  --line: rgba(255, 255, 255, 0.86);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top right, rgba(55, 199, 242, 0.28), transparent 34rem),
+    linear-gradient(135deg, var(--cream), #e9fbff 55%, #ecfbf4);
+}
+
+a {
+  color: var(--ocean);
+  font-weight: 700;
+}
+
+.page {
+  width: min(920px, 100%);
+  margin: 0 auto;
+  padding: 48px 22px;
+}
+
+.hero {
+  min-height: 44vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  align-content: center;
+  gap: 14px;
+}
+
+.drop {
+  width: 92px;
+  height: 92px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 46px;
+  background: linear-gradient(135deg, var(--ocean), var(--aqua));
+  box-shadow: 0 22px 42px rgba(11, 123, 208, 0.22);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(42px, 8vw, 72px);
+  letter-spacing: 0;
+}
+
+h2 {
+  margin: 28px 0 10px;
+  font-size: 24px;
+  letter-spacing: 0;
+}
+
+h3 {
+  margin: 22px 0 8px;
+  font-size: 18px;
+  letter-spacing: 0;
+}
+
+p,
+li {
+  font-size: 18px;
+  line-height: 1.58;
+}
+
+.hero p {
+  max-width: 620px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 21px;
+}
+
+.panel {
+  padding: 24px;
+  border-radius: 24px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  box-shadow: 0 24px 60px rgba(11, 123, 208, 0.12);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.links a,
+.back {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 11px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--line);
+}
+
+.document {
+  max-width: 760px;
+}
+
+.document h1 {
+  margin-top: 28px;
+  font-size: clamp(36px, 7vw, 56px);
+}
+
+.updated,
+.note {
+  color: var(--muted);
+}
+
+.support-card {
+  margin: 18px 0;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding-top: 32px;
+  }
+
+  p,
+  li {
+    font-size: 16px;
+  }
+}
